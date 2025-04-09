@@ -12,8 +12,8 @@ public class Main {
 
 //        Divisão entre numeros inteiros apenas tras resultados inteiros
 //        Antes da divisão colocar (double)
-        System.out.println(12/5);
-        System.out.println((double)12/5);
+//        System.out.println(12/5);
+//        System.out.println((double)12/5);
 
 //        match
 //               potencia -> Math.pow(num1, num2);
@@ -32,5 +32,8 @@ public class Main {
 //        adiciona 1
 //        ++
 //        --
+        Exercicio01 ex1 = new Exercicio01();
+        ex1.operacoesMatematicas();
+
     }
 }
