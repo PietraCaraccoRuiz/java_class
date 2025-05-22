@@ -3,26 +3,19 @@ import java.util.Scanner;
 public class Exercicio08 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double valor = 0;
 
-        System.out.println("digite as horas: ");
-        double horas =  Integer.parseInt(scanner.nextLine());
-            if (valor < 4) {
-                valor = valor + (horas * 2);
-                System.out.println("1: " + horas);
-                System.out.println("1: " + valor);
-            }
-            if (valor >= 4) {
-                valor = valor + ((horas - 2) * 1.4);
-                System.out.println("2: "+ horas);
-                System.out.println("2: "+ valor);
-            }
-            if (valor >= 6.8) {
-                valor = valor + (horas - 4);
-                System.out.println("3: "+ horas);
-                System.out.println("3: "+ valor);
-            }
+        System.out.print("Digite as horas estacionadas: ");
+        double horas = Double.parseDouble(scanner.nextLine());
+        double valor = 0.0;
 
-        System.out.printf("Valor a ser pago: R$ %.2f", valor);
+        if (horas <= 2) {
+            valor = horas * 2.0;
+        } else if (horas <= 4) {
+            valor = 2 * 2.0 + (horas - 2) * 1.4;
+        } else {
+            valor = 2 * 2.0 + 2 * 1.4 + (horas - 4) * 1.0;
+        }
+
+        System.out.printf("Valor a ser pago: R$ %.2f%n", valor);
     }
 }
