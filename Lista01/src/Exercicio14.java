@@ -39,8 +39,14 @@ public class Exercicio14 {
         } else if (mes == 12) {
             if (dia < 25) {
                 dias_restantes = 25 - dia;
+            } else if(dia == 25){
+                System.out.println("É natalllllllllll!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             } else {
                 dias_restantes = (31 - dia) + 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 25;
+                ano = ano + 1;
+                if((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
+                    dias_restantes += 1;
+                }
             }
         }else{
             System.out.println("Mês inválido! Digite um mês de 1 a 12.");
