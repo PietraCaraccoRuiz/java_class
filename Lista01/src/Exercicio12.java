@@ -10,23 +10,28 @@ public class Exercicio12 {
 
         if (email.contains("@")){
             if (email.contains(".")) {
-                int posicaoArroba = email.indexOf("@");
-                int posicaoPonto = email.indexOf(".");
-                String dominio1 = email.substring(posicaoArroba + 1, posicaoPonto);
-                String dominio2 = email.substring(posicaoPonto + 1);
 
-                if (dominio1.isEmpty()) {
-                    System.out.println("E-mail não possui dominio depois do '@'");
+                int posicaoArroba = email.lastIndexOf("@");
+                int posicaoPonto = email.lastIndexOf(".");
+                if(posicaoPonto > posicaoArroba) {
+                    String dominio2 = email.substring(posicaoPonto + 1);
+                    String dominio1 = email.substring(posicaoArroba + 1, posicaoPonto);
+
+                    if (dominio1.isEmpty()) {
+                        System.out.println("E-mail não possui dominio depois do '@'");
+                    } else {
+                        valido += 1;
+                    }
+
+                    if (dominio2.isEmpty()) {
+                        System.out.println("E-mail não possui dominio depois do '.'");
+                    } else {
+                        valido += 1;
+                    }
+
                 } else {
-                    valido += 1;
+                    System.out.println("Não tem um . depois do '@'");
                 }
-
-                if (dominio2.isEmpty()) {
-                    System.out.println("E-mail não possui dominio depois do '.'");
-                } else {
-                    valido += 1;
-                }
-
             } else {
                 System.out.println("\nNão contem um domínio precisa de '.'");
             }

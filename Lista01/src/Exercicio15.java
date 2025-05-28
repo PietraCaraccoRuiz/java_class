@@ -9,38 +9,40 @@ public class Exercicio15 {
         System.out.println("Escreva um número de 1 a 99: ");
         int num = Integer.parseInt(scanner.nextLine());
 
-            if(num > 0 && num < 100){
-                if (num >= 20){
+            if(num >= 0 && num < 100) {
+                if (num >= 20) {
                     int dezena = Integer.parseInt(String.valueOf(num).substring(0, 1));
                     int unidade = Integer.parseInt(String.valueOf(num).substring(1));
                     num = unidade;
 
-                    if(dezena == 2){
+                    if (dezena == 2) {
                         num1 = "Vinte";
-                    } else if(dezena == 3){
+                    } else if (dezena == 3) {
                         num1 = "Trinta";
-                    }else if(dezena == 4){
+                    } else if (dezena == 4) {
                         num1 = "Quarenta";
-                    }else if(dezena == 5){
+                    } else if (dezena == 5) {
                         num1 = "Cinquenta";
-                    }else if(dezena == 6){
+                    } else if (dezena == 6) {
                         num1 = "Sessenta";
-                    }else if(dezena == 7){
+                    } else if (dezena == 7) {
                         num1 = "Setenta";
-                    }else if(dezena == 8){
+                    } else if (dezena == 8) {
                         num1 = "Oitenta";
-                    }else if(dezena == 9){
+                    } else if (dezena == 9) {
                         num1 = "Noventa";
                     }
 
-                    if(num == 0){
+                    if (num == 0) {
                         System.out.printf(num1);
-                    }else{
+                    } else {
                         System.out.printf(num1 + " e ");
                     }
                 }
 
-                if (num == 1){
+                if(num == 0){
+                    num2 = "Zero";
+                }else if(num == 1){
                     num2 = "Um";
                 } else if(num == 2){
                     num2 = "Dois";
